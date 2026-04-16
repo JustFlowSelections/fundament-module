@@ -49,7 +49,7 @@ function ResetPasswordPage() {
       toast.error("Fout bij het instellen van het nieuwe wachtwoord");
     } else {
       toast.success("Wachtwoord succesvol gewijzigd!");
-      navigate({ to: "/voorraad" });
+      navigate({ to: "/instellingen" });
     }
   };
 

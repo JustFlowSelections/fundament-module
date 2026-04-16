@@ -1,12 +1,8 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { Package, Settings, LogOut } from "lucide-react";
+import { Settings, LogOut } from "lucide-react";
 import logo from "@/assets/logo-white.png";
 import { cn } from "@/lib/utils";
 import type { AuthContext } from "@/hooks/useAuth";
-
-const navigation = [
-  { name: "Voorraad", href: "/voorraad" as const, icon: Package },
-];
 
 const bottomNavigation = [
   { name: "Instellingen", href: "/instellingen" as const, icon: Settings },
@@ -30,26 +26,7 @@ export function Sidebar({ auth }: SidebarProps) {
           <img src={logo} alt="Logo" className="h-24 w-auto" loading="eager" />
         </div>
 
-        <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto sidebar-scroll">
-          {navigation.map((item) => {
-            const isActive = location.pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.name}
-                to={item.href as any}
-                className={cn(
-                  "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                    : "text-sidebar-muted hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                )}
-              >
-                <item.icon className="h-5 w-5" />
-                {item.name}
-              </Link>
-            );
-          })}
-        </nav>
+        <nav className="flex-1 px-3 py-4 overflow-y-auto sidebar-scroll" />
 
         <div className="border-t border-sidebar-border px-3 py-4">
           {bottomNavigation.map((item) => {
