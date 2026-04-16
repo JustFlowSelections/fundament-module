@@ -50,6 +50,119 @@ export type Database = {
         }
         Relationships: []
       }
+      customer_field_options: {
+        Row: {
+          created_at: string
+          field_setting_id: string
+          id: string
+          label: string
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          field_setting_id: string
+          id?: string
+          label: string
+          sort_order?: number
+        }
+        Update: {
+          created_at?: string
+          field_setting_id?: string
+          id?: string
+          label?: string
+          sort_order?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "customer_field_options_field_setting_id_fkey"
+            columns: ["field_setting_id"]
+            isOneToOne: false
+            referencedRelation: "customer_field_settings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      customer_field_settings: {
+        Row: {
+          created_at: string
+          field_key: string
+          field_label: string
+          field_type: string
+          id: string
+          is_custom: boolean
+          sort_order: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          field_key: string
+          field_label: string
+          field_type?: string
+          id?: string
+          is_custom?: boolean
+          sort_order?: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          field_key?: string
+          field_label?: string
+          field_type?: string
+          id?: string
+          is_custom?: boolean
+          sort_order?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      customers: {
+        Row: {
+          address: string | null
+          city: string | null
+          company_name: string
+          contact_person: string | null
+          country: string | null
+          created_at: string
+          custom_fields: Json
+          email: string | null
+          id: string
+          notes: string | null
+          phone: string | null
+          postal_code: string | null
+          updated_at: string
+        }
+        Insert: {
+          address?: string | null
+          city?: string | null
+          company_name: string
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string
+          custom_fields?: Json
+          email?: string | null
+          id?: string
+          notes?: string | null
+          phone?: string | null
+          postal_code?: string | null
+          updated_at?: string
+        }
+        Update: {
+          address?: string | null
+          city?: string | null
+          company_name?: string
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string
+          custom_fields?: Json
+          email?: string | null
+          id?: string
+          notes?: string | null
+          phone?: string | null
+          postal_code?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       inventory_settings: {
         Row: {
           created_at: string
