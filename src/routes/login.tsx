@@ -11,7 +11,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/login")({
   beforeLoad: ({ context }) => {
     if ((context as any).auth?.isAuthenticated) {
-      throw redirect({ to: "/voorraad" });
+      throw redirect({ to: "/instellingen" });
     }
   },
   component: LoginPage,
@@ -39,7 +39,7 @@ function LoginPage() {
     if (error) {
       toast.error("Controleer je e-mailadres en wachtwoord.");
     } else {
-      navigate({ to: "/voorraad" });
+      navigate({ to: "/instellingen" });
     }
   };
 

@@ -5,14 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Loader2, User } from "lucide-react";
-import { ProductFieldsCard } from "@/components/instellingen/ProductFieldsCard";
-import { InventoryNavigationCard } from "@/components/instellingen/InventoryNavigationCard";
-import { LocationsCard } from "@/components/instellingen/LocationsCard";
-import { ProductCategoriesCard } from "@/components/instellingen/ProductCategoriesCard";
 import { NotificationSettingsCard } from "@/components/instellingen/NotificationSettingsCard";
 
 export const Route = createFileRoute("/_authenticated/instellingen")({
@@ -25,7 +20,6 @@ function InstellingenPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [saving, setSaving] = useState(false);
   const [changingPassword, setChangingPassword] = useState(false);
-  const [categoryRefreshKey, setCategoryRefreshKey] = useState(0);
 
   const handleUpdateProfile = async () => {
     setSaving(true);
@@ -109,18 +103,6 @@ function InstellingenPage() {
 
           {/* Notification Settings */}
           <NotificationSettingsCard />
-
-          {/* Product Categories */}
-          <ProductCategoriesCard onCategoriesChanged={() => setCategoryRefreshKey((k) => k + 1)} />
-
-          {/* Product Fields */}
-          <ProductFieldsCard refreshKey={categoryRefreshKey} />
-
-          {/* Locations */}
-          <LocationsCard />
-
-          {/* Inventory Navigation */}
-          <InventoryNavigationCard />
         </div>
       </main>
     </>
