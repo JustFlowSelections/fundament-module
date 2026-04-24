@@ -40,7 +40,9 @@ export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover
 export { Checkbox } from "./components/ui/checkbox";
 export { Separator } from "./components/ui/separator";
 export { Skeleton } from "./components/ui/skeleton";
+export { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from "./components/ui/dialog";
 export { toast } from "sonner";
+
 
 // Utilities
 export { cn } from "./lib/utils";
