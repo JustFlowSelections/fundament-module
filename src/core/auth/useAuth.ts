@@ -94,3 +94,6 @@ export function useAuthState(): AuthContext {
     signIn, signOut, resetPassword, refreshRoles,
   };
 }
+export function useAuth(): AuthContext {
+  return useAuthState();
+}
