@@ -1,5 +1,5 @@
 // Auth
-export { useAuthState } from "./auth/useAuth";
+export { useAuth, useAuthState } from "./auth/useAuth";
 export type { AuthContext, AuthState, AuthActions, AppRole } from "./auth/useAuth";
 
 // Supabase
