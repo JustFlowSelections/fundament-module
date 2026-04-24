@@ -10,6 +10,7 @@ export type { Database } from "./supabase/types";
 export { Header } from "./components/layout/Header";
 export { InstellingenPage } from "./components/layout/InstellingenPage";
 export { Sidebar } from "./components/layout/Sidebar";
+export { Toaster } from "./components/ui/sonner";
 
 // UI components
 export { Button } from "./components/ui/button";
@@ -18,7 +19,7 @@ export { Label } from "./components/ui/label";
 export { Textarea } from "./components/ui/textarea";
 export { Switch } from "./components/ui/switch";
 export { Badge } from "./components/ui/badge";
-export { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./components/ui/card";
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
 export {
   Dialog, DialogContent, DialogHeader, DialogTitle,
   DialogTrigger, DialogFooter, DialogClose,
