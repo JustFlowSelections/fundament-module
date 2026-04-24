@@ -1,8 +1,11 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "@flowselections/core",
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "exports": {
+    ".": "./src/core/index.ts"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

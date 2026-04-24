@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, Link, createRootRouteWithContext, HeadContent, Scripts, useRouter } from "@tanstack/react-router";
-import { Toaster } from "@/components/ui/sonner";
-import { useAuthState, type AuthContext } from "@/hooks/useAuth";
+import { Toaster } from "@/core/components/ui/sonner";
+import { useAuthState, type AuthContext } from "@/core/auth/useAuth";
 
 import appCss from "../styles.css?url";
 
